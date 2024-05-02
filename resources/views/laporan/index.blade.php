@@ -19,7 +19,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="btn btn-primary float-right" href="#">
+                <a class="btn btn-primary float-right" href="{{ route('laporan.create') }}">
                     Add New
                 </a>
             </li>
@@ -40,16 +40,23 @@
         </tr>
         </thead>
         <tbody>
+        @forelse ($laporan as $laporan)
         <tr>
-          <td>Trident</td>
-          <td>Internet
-            Explorer 4.0
-          </td>
-          <td>Win 95+</td>
-          <td> 4</td>
-          <td>X</td>
-          <td>X</td>
+          <td>{{ $laporan->id }}</td>
+          <td>{{ $laporan->name }}</td>
+          <td>{{ $laporan->idpel }}</td>
+          <td>{{ $laporan->keterangan}}</td>
+          <td><img src="{{ asset($laporan->bukti) }}" class="img-thumbnail" style="width:200px" /></td>
+          <td>xxx</td>
         </tr>
+        @empty
+        <tr>
+          <td colspan="6">
+          No record found!
+          </td>
+        </tr>
+        @endforelse
+        </tbody>
       </table>
     </div>
     <!-- /.card-body -->
