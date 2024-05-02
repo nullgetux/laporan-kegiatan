@@ -25,4 +25,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/laporan', [App\Http\Controllers\LaporanController::class, 'index'])->name('laporan');
 Route::get('/laporan/create', [App\Http\Controllers\LaporanController::class, 'create'])->name('laporan.create');
+Route::get('/laporan/show/{id}', [App\Http\Controllers\LaporanController::class, 'show'])->name('laporan.show');
 Route::post('/laporan', [App\Http\Controllers\LaporanController::class, 'store'])->name('laporan.store');
+Route::get('/laporan/export', [App\Http\Controllers\LaporanController::class, 'export'])->name('laporan.export');

@@ -14,7 +14,7 @@
       <div class="card-tools">
         <ul class="nav nav-pills ml-auto">
             <li class="nav-item">
-                <a class="btn btn-success float-right" href="#">
+                <a class="btn btn-success float-right" href="{{ route('laporan.export')}}">
                     Export Xlsx
                 </a>
             </li>
