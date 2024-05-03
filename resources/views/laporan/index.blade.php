@@ -10,7 +10,7 @@
 @section('content_body')
 <div class="card">
     <div class="card-header">
-      <h3 class="card-title">DataTable with default features</h3>
+      <h3 class="card-title">Data Laporan Kegiatan</h3>
       <div class="card-tools">
         <ul class="nav nav-pills ml-auto">
             <li class="nav-item">
