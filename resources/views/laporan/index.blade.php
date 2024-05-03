@@ -10,16 +10,16 @@
 @section('content_body')
 <div class="card">
     <div class="card-header">
-      <h3 class="card-title">DataTable with default features</h3>
+      <h3 class="card-title">Data Laporan Kegiatan</h3>
       <div class="card-tools">
         <ul class="nav nav-pills ml-auto">
             <li class="nav-item">
-                <a class="btn btn-success float-right" href="#">
+                <a class="btn btn-success float-right" href="{{ route('laporan.export')}}">
                     Export Xlsx
                 </a>
             </li>
             <li class="nav-item">
-                <a class="btn btn-primary float-right" href="#">
+                <a class="btn btn-primary float-right" href="{{ route('laporan.create') }}">
                     Add New
                 </a>
             </li>
@@ -40,16 +40,35 @@
         </tr>
         </thead>
         <tbody>
+        @forelse ($laporan as $laporan)
         <tr>
-          <td>Trident</td>
-          <td>Internet
-            Explorer 4.0
+          <td>{{ $laporan->id }}</td>
+          <td>{{ $laporan->name }}</td>
+          <td>{{ $laporan->idpel }}</td>
+          <td>{{ $laporan->keterangan}}</td>
+          <td><img src="{{ asset($laporan->bukti) }}" class="img-thumbnail" style="width:200px" /></td>
+          <td>
+          <div class="d-flex justify-content-center">
+            <a class="btn btn-primary" href="{{ route('laporan.show', ['id' => $laporan->id]) }}">
+                    detail
+            </a>
+            <a class="btn btn-success" href="{{ route('laporan.show', ['id' => $laporan->id]) }}">
+                    edit
+            </a>
+            <a class="btn btn-danger" href="{{ route('laporan.show', ['id' => $laporan->id]) }}">
+                    hapus
+            </a>
+          </div>
           </td>
-          <td>Win 95+</td>
-          <td> 4</td>
-          <td>X</td>
-          <td>X</td>
         </tr>
+        @empty
+        <tr>
+          <td colspan="6">
+          No record found!
+          </td>
+        </tr>
+        @endforelse
+        </tbody>
       </table>
     </div>
     <!-- /.card-body -->

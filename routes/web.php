@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LaporanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
@@ -22,3 +24,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/laporan', [App\Http\Controllers\LaporanController::class, 'index'])->name('laporan');
+Route::get('/laporan/create', [App\Http\Controllers\LaporanController::class, 'create'])->name('laporan.create');
+Route::get('/laporan/show/{id}', [App\Http\Controllers\LaporanController::class, 'show'])->name('laporan.show');
+Route::get('/laporan/show/export/{id}', [App\Http\Controllers\LaporanController::class, 'exportpdf'])->name('laporan.exportpdf');
+Route::post('/laporan', [App\Http\Controllers\LaporanController::class, 'store'])->name('laporan.store');
+Route::get('/laporan/export', [App\Http\Controllers\LaporanController::class, 'export'])->name('laporan.export');
