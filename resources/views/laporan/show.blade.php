@@ -13,6 +13,20 @@
 <div class="card card-primary">
               <div class="card-header">
                 <h3 class="card-title">Detail Laporan Kegiatan</h3>
+                <div class="card-tools">
+                  <ul class="nav nav-pills ml-auto">
+                      <li class="nav-item">
+                          <a class="btn btn-success float-right" href="{{ route('laporan.exportpdf', ['id' => $laporan->id]) }}">
+                              Export pdf
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="btn btn-primary float-right" href="{{ route('laporan') }}">
+                              Back
+                          </a>
+                      </li>
+                  </ul>
+                </div>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
