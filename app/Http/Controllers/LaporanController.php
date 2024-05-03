@@ -8,6 +8,7 @@ use App\Models\Laporan;
 use App\Http\Requests\LaporanRequest;
 use App\Exports\LaporanExport;
 use Maatwebsite\Excel\Facades\Excel;
+use PDF;
 
 class LaporanController extends Controller
 {
@@ -57,4 +58,16 @@ class LaporanController extends Controller
 		return Excel::download(new LaporanExport, 'laporan-kegiatan.xlsx');
 	}
 
+    public function exportpdf(Request $request, $id)
+    {
+        $laporan = Laporan::find($id);
+        if (!$laporan) {
+            // Handle case where the laporan with the given id is not found
+            abort(404);
+        }
+
+        $pdf = PDF::loadView('laporan.show', ['laporan' => $laporan]);
+        $pdf->setOption('enable-local-file-access', true);
+        return $pdf->download('details.pdf');
+    }
 }
