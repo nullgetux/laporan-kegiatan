@@ -47,7 +47,19 @@
           <td>{{ $laporan->idpel }}</td>
           <td>{{ $laporan->keterangan}}</td>
           <td><img src="{{ asset($laporan->bukti) }}" class="img-thumbnail" style="width:200px" /></td>
-          <td>xxx</td>
+          <td>
+          <div class="d-flex justify-content-center">
+            <a class="btn btn-primary" href="{{ route('laporan.show', ['id' => $laporan->id]) }}">
+                    detail
+            </a>
+            <a class="btn btn-success" href="{{ route('laporan.show', ['id' => $laporan->id]) }}">
+                    edit
+            </a>
+            <a class="btn btn-danger" href="{{ route('laporan.show', ['id' => $laporan->id]) }}">
+                    hapus
+            </a>
+          </div>
+          </td>
         </tr>
         @empty
         <tr>
