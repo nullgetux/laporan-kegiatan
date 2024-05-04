@@ -19,6 +19,11 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+Route::get('/test', function () {
+    return view('laporan.test');
+});
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -30,3 +35,4 @@ Route::get('/laporan/delete/{id}', [App\Http\Controllers\LaporanController::clas
 Route::get('/laporan/show/export/{id}', [App\Http\Controllers\LaporanController::class, 'exportpdf'])->name('laporan.exportpdf');
 Route::post('/laporan', [App\Http\Controllers\LaporanController::class, 'store'])->name('laporan.store');
 Route::get('/laporan/export', [App\Http\Controllers\LaporanController::class, 'export'])->name('laporan.export');
+
