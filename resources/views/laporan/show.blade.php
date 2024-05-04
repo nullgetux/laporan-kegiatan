@@ -53,7 +53,7 @@
                 <strong><i class="far fa-file-alt mr-1"></i> Bukti Foto</strong>
 
                 <p class="text-muted"><img src="{{ asset($laporan->bukti) }}" class="img-thumbnail" style="width:500px" /></p>
-
+                
               </div>
               <!-- /.card-body -->
             </div>
