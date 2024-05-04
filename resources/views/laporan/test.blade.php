@@ -18,19 +18,19 @@
 </head>
 <body>
     <header>
-        <h1>Details Laporan Kegiatan</h1>
+        <h2>Evidence PRR</h2>
         <nav>
             <ul>
-                <li>ID Pelanggan : {{$laporan->idpel}}</li>
-                <li>Nama : {{$laporan->name}}</li>
-                <li>Keterangan : {{$laporan->keterangan}}</li>
+                <li style="font-size:20px">Nama Pelanggan: {{$laporan->name}}</li>
+                <li style="font-size:20px">ID Pelanggan : {{$laporan->idpel}}</li>
+                <li style="font-size:20px">Keterangan : {{$laporan->keterangan}}</li>
             </ul>
         </nav>
     </header>
     <section>
         <article>
             <h3>Bukti Foto</h3>
-            
+            <p class="text-muted"><img src="{{ public_path($laporan->bukti) }}" class="img-thumbnail" style="width:750px" /></p>
         </article>
     </section>
 </body>

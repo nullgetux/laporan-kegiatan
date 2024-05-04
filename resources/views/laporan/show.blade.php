@@ -30,7 +30,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <strong><i class="fas fa-book mr-1"></i> Nama</strong>
+                <strong><i class="fas fa-book mr-1"></i> Nama Pelanggan</strong>
 
                 <p class="text-muted">
                     {{$laporan->name}}
