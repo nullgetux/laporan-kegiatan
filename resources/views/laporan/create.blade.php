@@ -40,8 +40,8 @@
                     @endif
 
                   <div class="form-group">
-                    <label for="name">Nama Pelanggan</label>
-                    <input name="name" value="{{ old('name') }}"class="form-control" id="name" placeholder="Masukan Nama">
+                    <label for="name">Nama</label>
+                    <input name="name" value="{{ old('name') }}"class="form-control" id="name" placeholder="Masukan Nama Pelanggan">
                   </div>
                   <div class="form-group">
                     <label for="idpel">ID Pelanggan</label>
@@ -50,15 +50,6 @@
                   <div class="form-group">
                     <label for="keterangan">Keterangan</label>
                     <input name="keterangan" value="{{ old('keterangan') }}"class="form-control" id="keterangan" placeholder="Masukan Keterangan">
-                  </div>
-                  <div class="form-group">
-                    <label for="bukti">Upload Foto Bukti</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="bukti" name="bukti">
-                        <label class="custom-file-label" for="bukti">Pilih Foto</label>
-                      </div>
-                    </div>
                   </div>
                   <div class="form-group">
                     <label for="bukti">Upload Foto Bukti</label>
