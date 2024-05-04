@@ -36,6 +36,19 @@ class LaporanController extends Controller
         return view('laporan.show', $data);
     }
 
+    public function delete($id)
+    {
+        // Find the laporan by id
+        $laporan = Laporan::findOrFail($id);
+        
+        // Delete the laporan
+        $laporan->delete();
+        
+        // Optionally, you can return a response indicating success
+        return redirect()->back();
+    }
+
+
 
     public function store(LaporanRequest $request)
     {
