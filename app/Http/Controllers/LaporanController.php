@@ -82,6 +82,7 @@ class LaporanController extends Controller
         $laporan['laporan'] = $laporan;
         $pdf = PDF::loadView('laporan.test', ['laporan' => $laporan]);
         $pdf->setOption('enable-local-file-access', true);
-        return $pdf->download('details.pdf');
+        $filename = $laporan->idpel.' '.$laporan->name.'.'.'pdf';
+        return $pdf->download($filename);
     }
 }
