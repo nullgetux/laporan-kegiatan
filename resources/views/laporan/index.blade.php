@@ -40,9 +40,9 @@
         </tr>
         </thead>
         <tbody>
-        @forelse ($laporan as $laporan)
+        @forelse ($laporan as $index => $laporan)
         <tr>
-          <td>{{ $laporan->id }}</td>
+          <td>{{ $index + 1}}</td>
           <td>{{ $laporan->name }}</td>
           <td>{{ $laporan->idpel }}</td>
           <td>{{ $laporan->keterangan}}</td>
@@ -55,7 +55,7 @@
             <a class="btn btn-success" href="{{ route('laporan.show', ['id' => $laporan->id]) }}">
                     edit
             </a>
-            <a class="btn btn-danger" href="{{ route('laporan.show', ['id' => $laporan->id]) }}">
+            <a class="btn btn-danger" href="{{ route('laporan.delete', ['id' => $laporan->id]) }}">
                     hapus
             </a>
           </div>
