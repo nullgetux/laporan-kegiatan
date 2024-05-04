@@ -40,7 +40,7 @@
                     @endif
 
                   <div class="form-group">
-                    <label for="name">Nama</label>
+                    <label for="name">Nama Pelanggan</label>
                     <input name="name" value="{{ old('name') }}"class="form-control" id="name" placeholder="Masukan Nama Pelanggan">
                   </div>
                   <div class="form-group">
