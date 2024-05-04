@@ -30,7 +30,7 @@
     <section>
         <article>
             <h3>Bukti Foto</h3>
-            <p><img src="{{ asset($laporan->bukti) }}" alt="Bukti Foto" class="img-thumbnail" style="width:500px" /></p>
+            
         </article>
     </section>
 </body>
