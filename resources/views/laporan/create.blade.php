@@ -60,6 +60,15 @@
                       </div>
                     </div>
                   </div>
+                  <div class="form-group">
+                    <label for="bukti">Upload Foto Bukti</label>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="bukti" name="bukti">
+                        <label class="custom-file-label" for="bukti">Pilih Foto</label>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <!-- /.card-body -->
 
