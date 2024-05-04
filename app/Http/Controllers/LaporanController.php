@@ -66,7 +66,8 @@ class LaporanController extends Controller
             abort(404);
         }
 
-        $pdf = PDF::loadView('laporan.show', ['laporan' => $laporan]);
+        $laporan['laporan'] = $laporan;
+        $pdf = PDF::loadView('laporan.test', ['laporan' => $laporan]);
         $pdf->setOption('enable-local-file-access', true);
         return $pdf->download('details.pdf');
     }
